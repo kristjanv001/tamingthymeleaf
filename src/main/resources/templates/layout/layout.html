@@ -15,8 +15,7 @@
 </head>
 <body class="h-full">
 
-  <div x-data="sidebarMenu()"
-       @keydown.window.escape="closeSidebar">
+  <div x-data="sidebarMenu()" @keydown.window.escape="closeSidebar">
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
     <div th:replace="~{fragments/sidebar-menu :: mobile}"></div>
 
@@ -28,12 +27,11 @@
 
       <main class="flex-1">
         <div class="py-6">
-          <div layout:fragment="page-content">
-          </div>
+          <div layout:fragment="page-content"></div>
         </div>
-        </main>
-      </div>
+      </main>
     </div>
+  </div>
 
 
   <script type="text/javascript" th:src="@{/webjars/alpinejs/dist/cdn.min.js}" defer></script>
